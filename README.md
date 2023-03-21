@@ -1,5 +1,6 @@
-# SiMoD23-SIMD-FPGA
-Simplicity done right for SIMDified query processing on CPU and FPGA
+# Simplicity done right for SIMDified query processing on CPU and FPGA
+
+This is the corresponding prototype to our SiMoD 2023 submission showing a simple but effective solution idea to port SIMDified query processing code to Intel FPGA cards for acceleration. The main advantage of our approach is that it seamlessly integrates with existing SIMD abstraction libraries that are originally developed to overcome SIMD heterogeneity on x86-processors. Moreover, our approach can be straightforwardly implemented in C++ without the necessity of complex FPGA-specific programming. Our initial results are very promising, demonstrating a novel approach to comprehensively integrate Intel FPGAs into the prevailing SIMDified processing on the CPU with reasonable effort.
 
 ---
 ### Prototype description
