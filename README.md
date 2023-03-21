@@ -1,13 +1,18 @@
 # SiMoD23-SIMD-FPGA
 Simplicity done right for SIMDified query processing on CPU and FPGA
 
+---
 ### Prototype description
 
 build/ (folder for build files)
+
 libs/ (SIMD abstraction library TVL)
+
 src/ (evaluation SIMD kernels)
+
 Makefile 
 
+---
 ### SIMD abstraction library (TVL)
 
 This prototype contains only the relevant primitives for the evaluated SIMD kernels.
