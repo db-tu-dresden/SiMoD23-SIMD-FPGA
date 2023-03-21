@@ -24,6 +24,12 @@ For the full library, checkout the generator:
 And run it with the following command:
     > `python3 main.py --targets fpga $(LANG=en;lscpu | grep -i flags | tr ' ' '\n' | egrep -v '^Flags:|^$' | sort -d | tr '\n' ' ') --no-concepts`
     
-    
+---    
 ### SIMD kernels
-As described in our paper, we conducted two core evaluation: (i) FPGA performance and (ii) acceleration. 
+As described in our paper, we conducted two core evaluation: (i) FPGA performance and (ii) acceleration.
+
+#### FPGA performance
+To demonstrate the viability of our approach with templated C++ kernels, we developed two examples. One is a very basic aggregation SIMD-kernel (see `src/eval_agg_kernel.cpp`), i.e., streaming over the data and adding every element. The second is a filter-count SIMD-kernel (see `src/eval_filter_kernel.cpp`), which counts the amount of values in a given range.
+
+#### Aceeleration evaluation
+Our next experiment evaluates the achieved bandwidth for concurrent calculations on both the host CPU and the FPGA (see `eval/eval_acceleration.cpp`). Here, we vary the amount of concurrent threads on the host processor and additionally dispatch the same SIMD-kernel to the FPGA. The host code is executed using \SI{512}{\bit} sized AVX512 registers and the FPGA kernel is also parameterized to use \SI{512}{\bit} for its register width.
