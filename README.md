@@ -6,9 +6,9 @@ Simplicity done right for SIMDified query processing on CPU and FPGA
 
 build/ (folder for build files)
 
-libs/ (SIMD abstraction library TVL)
+libs/ (folder contains SIMD abstraction library TVL with an FPGA backend)
 
-src/ (evaluation code including SIMD kernels)
+src/ (folder contains evaluation code including SIMD kernels using TVL)
 
 Makefile 
 
