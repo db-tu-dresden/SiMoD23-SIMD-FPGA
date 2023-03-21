@@ -8,7 +8,7 @@ build/ (folder for build files)
 
 libs/ (SIMD abstraction library TVL)
 
-src/ (evaluation SIMD kernels)
+src/ (evaluation code including SIMD kernels)
 
 Makefile 
 
@@ -22,7 +22,7 @@ For the full library, checkout the generator:
     > git clone --recurse-submodules git@github.com:db-tu-dresden/TVL.git
 
 And run it with the following command:
-    > python3 main.py --targets fpga $(LANG=en;lscpu | grep -i flags | tr ' ' '\n' | egrep -v '^Flags:|^$' | sort -d | tr '\n' ' ') --no-concepts
+    > `python3 main.py --targets fpga $(LANG=en;lscpu | grep -i flags | tr ' ' '\n' | egrep -v '^Flags:|^$' | sort -d | tr '\n' ' ') --no-concepts`
     
     
 ### SIMD kernels
